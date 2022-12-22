@@ -92,6 +92,11 @@ body {
   background-color: $blueGrayLight;
 }
 
+.container {
+  width: 100%;
+  margin: auto;
+}
+
 .header {
   overflow: hidden;
   display: flex;
@@ -99,6 +104,8 @@ body {
   padding: 2rem 1rem;
   align-items: center;
   background-color: $white;
+  position: relative;
+  z-index: 2;
 
   &_active {
     position: fixed;
@@ -175,12 +182,17 @@ body {
   padding-bottom: 5rem;
 
   &__image {
-    // position: absolute;
     width: 100%;
     background-image: url('./images/bg-intro-mobile.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: -40px;
     height: 40rem;
+    margin-top: -8.438rem;
+  }
+
+  &__box {
+    z-index: 4;
   }
 
 }
@@ -307,7 +319,13 @@ body {
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
+
+  .header {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
   .main {
     display: flex;
     align-items: center;
@@ -317,12 +335,17 @@ body {
       order: 2;
       background-image: url('./images/bg-intro-desktop.svg');
       flex: 1;
+      top: 10rem;
+      right: 0;
+      width: auto;
+      position: absolute;
     }
 
     &__box {
       order: 1;
       flex: 1;
       text-align: start;
+      max-width: 45rem;
     }
   }
 

@@ -2,7 +2,7 @@ let burger = document.querySelector('.header__burger'),
   header = document.querySelector('.header'),
   button = document.querySelector('.header__button'),
   list = document.querySelector('.header__list'),
-  mediaQuery = window.matchMedia("(min-width: 900px)")
+  mediaQuery = window.matchMedia("(min-width: 1000px)")
 
 burger.addEventListener('click', () => {
   header.classList.toggle('header_active')
